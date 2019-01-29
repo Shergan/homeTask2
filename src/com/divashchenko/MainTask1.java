@@ -10,13 +10,11 @@ public class MainTask1 {
     }
 
     private static int howMuchAreJewelsInStones(String jewels, String stones) {
-        String[] tmpJewels = jewels.split("");
-        String[] tmpStones = stones.split("");
         int count = 0;
 
-        for (String tmpJewel : tmpJewels) {
-            for (String tmpStone : tmpStones) {
-                if (tmpJewel.equals(tmpStone)) {
+        for (int i = 0; i < jewels.length(); i++) {
+            for (int j = 0; j < stones.length(); j++) {
+                if (jewels.charAt(i) == stones.charAt(j)) {
                     count++;
                 }
             }
